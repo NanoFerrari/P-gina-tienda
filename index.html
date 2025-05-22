@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TiendaMobilFirst</title>
+    <link rel="stylesheet" href="stilosen.css">
+</head>
+
+<body class="Pagina Principal">
+
+<header>
+    <h1>SJM</h1>
+    <button id="menu">☰</button>
+</header>
+
+<div class="calificacion">
+    <img src="Imagenes Main/estrella-brillante.avif" alt="Calificación">
+    <p>Califica la Atención</p>
+</div>
+
+<!-- Sección de fondo -->
+<section class="fondo">
+    <h2 class="titulo">Productos Destacados</h2>
+
+    <nav class="tarjetasCategoria">
+        <div class="tarjetaCategoria">
+            <a href="productos.html#gaseosas">
+                <img src="Imagenes Main/cocacola.jpg" alt="">
+                <h2>GASEOSAS</h2>
+            </a>
+        </div>
+        <div class="tarjetaCategoria">
+            <a href="productos.html#panes">
+                <img src="Imagenes Main/cafe.webp" alt="">
+                <h2>PANES</h2>
+            </a>
+        </div>
+        <div class="tarjetaCategoria">
+            <a href="productos.html#carnes">
+                <img src="Imagenes Main/pollo.jpg" alt="">
+                <h2>CARNES</h2>
+            </a>
+        </div>
+    </nav>
+</section>
+
+<!-- Nueva sección para la imagen de información -->
+<section class="informacion">
+    <img src="Imagenes Main/2-Banner-Desktop.jpg" alt="Información">
+</section>
+
+<script>
+    let lastScrollTop = 0;
+    const header = document.querySelector("header");
+
+    window.addEventListener("scroll", function () {
+        let scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop) {
+            // Si el usuario baja, ocultamos el header
+            header.style.transform = "translateY(-100%)";
+        } else {
+            // Si el usuario sube, mostramos el header
+            header.style.transform = "translateY(0)";
+        }
+        lastScrollTop = scrollTop;
+    });
+</script>
+
+</body>
+</html>

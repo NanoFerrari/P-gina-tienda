@@ -1,0 +1,339 @@
+/* Variables y colores modernos */
+:root {
+    --color-primary: #125c5b;
+    --color-secondary: #FBF3E4;
+    --color-accent: #f9755e;
+    --color-dark: #333333;
+    --color-light: #FFFFFF;
+    --color-success: #25D366;
+    --color-success-hover: #128C7E;
+    --color-danger: #D32F2F;
+    --color-danger-hover: #B71C1C;
+    --header-height: 80px;
+    --header-height-mobile: 70px;
+    --border-radius: 10px;
+    --box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    --transition: 0.3s cubic-bezier(.4,0,.2,1);
+    --font-main: 'Segoe UI', Arial, sans-serif;
+}
+
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-main);
+}
+
+body {
+    background: var(--color-secondary);
+    color: var(--color-dark);
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 18px 24px;
+    background: var(--color-primary);
+    color: var(--color-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    transition: transform var(--transition), background var(--transition);
+    border-bottom: 4px solid var(--color-accent);
+    box-shadow: var(--box-shadow);
+    height: var(--header-height);
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Menú */
+#menu {
+    background: var(--color-accent);
+    color: var(--color-light);
+    border: none;
+    padding: 10px 18px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    opacity: 0.9;
+    transition: background var(--transition), transform var(--transition);
+    box-shadow: var(--box-shadow);
+}
+#menu:hover {
+    background: color-mix(in srgb, var(--color-accent), black 10%);
+    transform: translateY(-2px) scale(1.05);
+}
+
+/* Imagen de fondo */
+.fondo {
+    width: 100%;
+    min-height: 500px;
+    background-image: url("Imagenes Main/Pasillo.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end; /* Asegura que el contenido quede bien posicionado */
+    position: relative;
+    padding-bottom: 20px;
+}
+.fondo2{
+    width: 100%;
+    height: 700px; /* Ajusta según lo necesites */
+    background-image: url("Imagenes Secundaria/pasillos.avif");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end; /* Asegura que el contenido quede bien posicionado */
+    position: relative;
+    padding-bottom: 20px;
+}
+
+
+/* Título "Productos Destacados" */
+.titulo {
+    font-size: 24px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2; /* Asegura que el título esté sobre las tarjetas */
+}
+
+/* Menú de calificación */
+.calificacion {
+    position: fixed; /* Se mantiene fijo al desplazarse */
+    left: 0px; /* Pegado al lado izquierdo */
+    top: 28%; /* Centrado verticalmente */
+    transform: translateY(-50%); /* Ajuste fino para centrarlo */
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    width: 90px;
+    height: auto;
+    text-align: center;
+    z-index: 1000; /* Se mantiene encima de todo */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Imagen dentro del recuadro */
+.calificacion img {
+    width: 50px; /* Tamaño controlado */
+    height: auto;
+    display: block;
+    margin: 0 auto 10px; /* Centrado con margen inferior */
+}
+
+/* Texto dentro del recuadro */
+.calificacion p {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Nueva sección para la imagen de información */
+.informacion {
+    width: 100%;  
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.informacion img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+/* menú derecha*/
+.categorias {
+    position: fixed;
+    right: 0px;
+    top: 35%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    width: 120px;
+    height: auto;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos de los enlaces menú derecha */
+.categorias a {
+    display: block;  /* Hace que cada enlace ocupe toda la línea */
+    color: white;
+    text-decoration: none;  /* Quita el subrayado */
+    font-size: 16px;
+    padding: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Efecto al pasar el cursor */
+.categorias a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: yellow;
+    border-radius: 5px;
+}
+
+
+
+
+/* Tarjetas Categoria producto */
+.tarjetasCategoria {
+    display: flex;
+    gap: 20px;
+    position: relative;
+    z-index: 2; /* Asegura que las tarjetas no queden detrás del fondo */
+}
+
+.tarjetaCategoria {
+    width: 150px;
+    height: 200px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.tarjetaCategoria img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.tarjetaCategoria h2 {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Efecto hover corregido */
+.tarjetaCategoria:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+/* Tarjetas Cantidad de producto */
+.tarjetasCantidad {
+    display: flex;
+    gap: 20px;
+    position: relative;
+    z-index: 2; /* Asegura que las tarjetas no queden detrás del fondo */
+}
+
+
+.tarjetaCantidad {
+    width: 150px;
+    height: 280px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease;
+
+}
+
+.tarjetaCantidad img {
+    width: 100%;
+    max-height: 100px; /* Mantener un tamaño uniforme */
+    object-fit: cover;
+    border-radius: 10px;
+    
+}
+
+.cantidad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.cantidad button {
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    padding: 2px 12px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cantidad button:hover {
+    background-color: #b71c1c;
+}
+
+.añadir {
+    background-color: #388e3c;
+    color: white;
+    border: none;
+    padding: 8px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.añadir:hover {
+    background-color: #2e7d32;
+}
+
+/* Efecto hover en la tarjeta */
+.tarjetaCantidad:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .fondo, .fondo2 {
+        height: auto;
+        padding: 100px 20px 40px; /* Ajusta el espacio para que no se sobreponga con el header */
+    }
+
+    .tarjetasCantidad, .tarjetasCategoria {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .tarjetasCantidad, .tarjetasCategoria  {
+        width: 80%;
+        max-width: 300px;
+    }
+}
