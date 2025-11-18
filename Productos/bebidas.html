@@ -1,0 +1,173 @@
+<!-- Ejemplo para bebidas.html -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SJM - Bebidas</title>
+  <link rel="stylesheet" href="estilosproductos.css">
+</head>
+
+<body>
+  <header>
+    <h1>SJM</h1>
+  </header>
+  <!-- Elemento de Imagen de fondo Body -->
+  <div class="fondo2">
+    <!-- Aquí va el contenido principal, incluyendo el h1 si lo tienes fuera del header -->
+    <!-- Botones flotantes para móvil -->
+    <button class="mobile-toggle" id="categories-toggle" aria-label="Mostrar categorías">
+      <span class="icon">☰</span>
+    </button>
+    <button class="mobile-toggle" id="info-toggle" aria-label="Mostrar información">
+      <span class="icon">ℹ️</span>
+    </button>
+    <section class="informacion" id="informacion">
+      <div class="inner-content">
+        <h2>Información</h2>
+        <p class="ir-footer" data-target="footer">Cómo comprar</p>
+        <p class="ir-footer" data-target="footer">Contáctanos</p>
+      </div>
+    </section>
+    <!--Menú Categorias -->
+    <section class="categorias" id="categorias">
+      <div class="inner-content">
+        <h2>Categorías</h2>
+        <ul class="menu-categorias">
+          <li><a href="alimentos.html">Alimentos</a></li>
+          <li><a href="bebidas.html">Bebidas</a></li>
+          <li><a href="panes.html">Panadería</a></li>
+          <li><a href="carnes.html">Carnes</a></li>
+          <li><a href="lacteos.html">Lácteos</a></li>
+          <li><a href="dulces.html">Dulces</a></li>
+          <li><a href="../productos.html">Todos</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contenido específico de la categoría -->
+    <section class="categoria-contenido">
+      <h1>Bebidas</h1>
+      <p>Explora nuestra selección de bebidas refrescantes y deliciosas.</p>
+
+      <nav class="tarjetasCantidad">
+        <!-- Aquí van los productos específicos de bebidas -->
+        <div class="tarjetaCantidad">
+          <img src="../Imagenes Main/cocacola.jpg" alt="Coca Cola">
+          <p>Coca Cola 1Lt</p>
+          <p>$1.50</p>
+
+          <div class="cantidad">
+            <button class="menos">-</button>
+            <span class="valor">1</span>
+            <button class="mas">+</button>
+          </div>
+
+          <button class="añadir">Añadir a la compra</button>
+        </div>
+        <div class="tarjetaCantidad">
+          <img src="../Imagenes Main/cocacola.jpg" alt="Coca Cola">
+          <p>Colacao 1Lt</p>
+          <p>$1.50</p>
+
+          <div class="cantidad">
+            <button class="menos">-</button>
+            <span class="valor">1</span>
+            <button class="mas">+</button>
+          </div>
+
+          <button class="añadir">Añadir a la compra</button>
+        </div>
+
+        <div class="tarjetaCantidad">
+          <img src="../Imagenes Main/cocacola.jpg" alt="Coca Cola">
+          <p>Ricacola 1Lt</p>
+          <p>$1.50</p>
+
+          <div class="cantidad">
+            <button class="menos">-</button>
+            <span class="valor">1</span>
+            <button class="mas">+</button>
+          </div>
+
+          <button class="añadir">Añadir a la compra</button>
+        </div>
+
+        <div class="tarjetaCantidad">
+          <img src="../Imagenes Main/cocacola.jpg" alt="Coca Cola">
+          <p>Coca negra</p>
+          <p>$1.30</p>
+
+          <div class="cantidad">
+            <button class="menos">-</button>
+            <span class="valor">1</span>
+            <button class="mas">+</button>
+          </div>
+
+          <button class="añadir">Añadir a la compra</button>
+        </div>
+
+        <div class="tarjetaCantidad">
+          <img src="../Imagenes Main/cocacola.jpg" alt="Coca Cola">
+          <p>Pepsi Cola 1Lt</p>
+          <p>$1.50</p>
+
+          <div class="cantidad">
+            <button class="menos">-</button>
+            <span class="valor">1</span>
+            <button class="mas">+</button>
+          </div>
+
+          <button class="añadir">Añadir a la compra</button>
+        </div>
+
+      </nav>
+    </section>
+  </div>
+  <!-- Carrito y scripts Botón flotante del carrito -->
+  <button id="carrito-toggle" class="fab-carrito">
+    <span class="carrito-icon">🛒</span>
+    <span class="carrito-contador">0</span>
+  </button>
+  <!-- Panel del carrito -->
+  <section id="carrito" class="carrito-drawer">
+    <div class="carrito-header">
+      <h2>Carrito de Compras</h2>
+      <button id="cerrar-carrito" class="cerrar-carrito-btn" aria-label="Cerrar carrito">
+        <span aria-hidden="true">×</span>
+      </button>
+    </div>
+    <div class="carrito-content">
+      <ul id="lista-carrito"></ul>
+      <div class="carrito-footer">
+        <p class="total-text">Total: <span id="total">$0.00</span></p>
+        <button id="finalizar-compra" class="boton-finalizar">Finalizar Compra</button>
+      </div>
+    </div>
+
+  </section>
+  <!-- Overlay del carrito -->
+  <div class="carrito-overlay"></div>
+
+  <footer id="footer" style="display: none;">
+    <div class="footer-content">
+      <p>© 2025 SJM Tienda. Todos los derechos reservados.</p>
+      <nav>
+        <a href="contacto.html">Contacto</a>
+        <a href="ayuda.html">Ayuda</a>
+        <!-- Más enlaces si lo deseas -->
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../JS/carrito.js"></script>
+  <script src="../JS/panel.js"></script>
+  <script src="../JS/productos.js"></script>
+  <script src="../JS/main.js"></script>
+
+
+
+</body>
+
+</html>

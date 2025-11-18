@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resumen de Compra y Facturación</title>
+  <link rel="stylesheet" href="resumenestilos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+  <header class="main-header">
+    <h1>Resumen de Compra y Facturación</h1>
+  </header>
+
+  <main class="main-content">
+    <article class="order-summary">
+      <section class="verification-section">
+        <div class="section-title-container">
+          <h2 class="section-title">VERIFICAR PEDIDO</h2>
+          <button id="volverBtn" class="volver-button" aria-label="Volver a modificar pedido">
+              <i class="fas fa-arrow-left"></i> Volver
+              <span class="tooltip">Haz clic para modificar tu pedido</span>
+          </button>
+      </div>
+      </section>
+        <div class="verification-steps">
+          <hr class="divider">
+        </div>
+      
+
+      <section class="order-details">
+        <h2 class="section-title">Detalles de tu pedido</h2>
+        <ul id="lista-resumen"></ul>
+
+      </section>
+    </article>
+
+    <footer class="checkout-footer">
+      <div class="footer-content">
+        <span class="final-price">$00.00</span>
+        <div class="whatsapp-container">
+          <button class="whatsapp-button" id="whatsappBtn">
+            <i class="fab fa-whatsapp"></i>
+            <span class="button-text">Enviar por WhatsApp</span>
+            <i class="fas fa-check icon-check"></i>
+            <i class="fas fa-spinner spinner"></i>
+          </button>
+          <div id="whatsappFeedback" class="feedback-message">¡Mensaje enviado con éxito!</div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="/JS/resumen.js"></script>
+</body>
+
+</html>
